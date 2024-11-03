@@ -51,6 +51,7 @@ option {
   outline: none;
   font-family: inherit;
   background-color: #fff;
+  font-size: 14px;
 }
 
 .polygon {
@@ -110,7 +111,7 @@ option {
   width: 100%;
 }
 
-.input_filters-box span input {
+.input_filters-box span select {
   padding: 8px 12px;
 }
 
