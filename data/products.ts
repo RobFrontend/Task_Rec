@@ -24,7 +24,7 @@ const products: Product[] = [
       "Silnik inwerterowy",
       "Wyświetlacz elektroniczny",
     ],
-    views: 213769, // for popularity sort
+    views: 213721, // for popularity sort
     energyClass: "A",
     priceValidDate: "15.09.2022 - 21.09.2022",
     price: 3199,
@@ -41,7 +41,7 @@ const products: Product[] = [
       "Panel AI Control",
       "Wyświetlacz elektroniczny",
     ],
-    views: 213721, // for popularity sort
+    views: 213769, // for popularity sort
     energyClass: "B",
     priceValidDate: "15.09.2022 - 21.09.2022",
     price: 3299,
