@@ -1,0 +1,276 @@
+@font-face {
+  font-family: "SamsungFont";
+  src: url("/fonts/samsung-one/SamsungOneArabic-400.woff2") format("woff2"),
+    url("/fonts/samsung-one/SamsungOneArabic-400.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "SamsungFont", sans-serif;
+  color: #000;
+  background-color: #ffff;
+}
+/* ************************** */
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+/* **************************** */
+.grid_item__center {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.heading_secondary {
+  height: 56px;
+  padding: 4px 0 12px 0;
+}
+.heading_secondary img {
+  height: 40px;
+}
+
+/* ******************************* */
+
+input,
+select,
+option {
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+.polygon {
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 0% 00%);
+  color: #00000000;
+  width: 8px;
+  height: 8px;
+}
+.polygon_up {
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  color: #00000000;
+  width: 8px;
+  height: 8px;
+}
+.polygon_grey {
+  background-color: #8d8d8d;
+}
+
+.polygon_blue {
+  background-color: #007aff;
+  width: 7px;
+  height: 7px;
+}
+
+.input {
+  padding: 8px 12px;
+}
+
+.input_search {
+  font-size: 14px;
+  line-height: 22px;
+  width: 249px;
+  height: 36px;
+}
+
+.input_filter_boxes {
+  padding: 0 205px;
+  display: grid;
+  gap: 14px;
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+
+.input_filters-box {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.input_filters-box span {
+  display: grid;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 18px;
+  /* max-width: 249px; */
+  width: 100%;
+}
+
+.input_filters-box span input {
+  padding: 8px 12px;
+}
+
+.results {
+  padding: 0 208px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+/* *********************** */
+
+.products_section {
+  background-color: #f8f8f8;
+  padding-bottom: 48px;
+  padding-top: 24px;
+}
+
+.products_box {
+  /* max-width: 1046px; */
+  padding: 0 197px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #f8f8f8;
+  gap: 16px;
+}
+
+.product_outbox {
+  max-width: 338px;
+  height: 100%;
+  display: grid;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 25px 24px;
+}
+
+.product_box {
+  display: grid;
+  gap: 16px;
+}
+
+.product_img {
+  /* figma settings 200px */
+  max-width: 200px;
+  /* max-width: 100%; */
+  align-self: center;
+  justify-self: center;
+  margin-top: 16px;
+}
+
+.product_title {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.product_specs_box {
+  line-height: 18px;
+}
+.product_specs_box p span {
+  font-weight: 700;
+  color: #000;
+}
+
+.product_price_box {
+  display: flex;
+  gap: 2px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.product_price_primary {
+  font-size: 40px;
+}
+.product_price_secondary {
+  line-height: 16px;
+  text-align: right;
+  align-self: center;
+  font-size: 14px;
+  padding-top: 6px;
+}
+
+.font_grey {
+  color: #767676;
+  font-size: 12px;
+}
+
+.font_dark_grey {
+  color: #555;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.class_box {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.classClip {
+  font-size: 12px;
+  clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+  background-color: #009949;
+  color: #fff;
+  min-width: 49px;
+  min-height: 18px;
+  padding-left: 6px;
+  padding-top: 2px;
+  border-radius: 1px;
+}
+
+button {
+  font-family: inherit;
+}
+
+.btn {
+  text-transform: uppercase;
+  cursor: pointer;
+  display: grid;
+  gap: 10px;
+  padding: 11px 40px; /* fixed height of button in figma*/
+  border-radius: 24px;
+  /* width: min-content; */
+  border: none;
+  align-self: center;
+  justify-self: center;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  text-align: center;
+  margin-top: 10px;
+  transition: opacity 0.3s;
+  width: 150px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn_blue {
+  color: #fff;
+  background-color: #1428a0;
+}
+
+/* ********************************************** */
+
+.show_more {
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 24px;
+  display: flex;
+  gap: 9px;
+  color: #007aff;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+}
