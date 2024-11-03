@@ -14,7 +14,7 @@ interface Product {
   };
 }
 
-const ProdDemo: React.FC<Product> = ({ prod }) => {
+const ProductCard: React.FC<Product> = ({ prod }) => {
   return (
     <div className="product_outbox">
       <div className="product_box">
@@ -58,4 +58,4 @@ const ProdDemo: React.FC<Product> = ({ prod }) => {
   );
 };
 
-export default ProdDemo;
+export default ProductCard;

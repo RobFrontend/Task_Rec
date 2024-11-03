@@ -1,8 +1,8 @@
 import { useState } from "react";
 import productsArr from "../../data/products.ts";
-import ProdDemo from "./ProdDemo.tsx";
+import ProdDemo from "./ProductCard.tsx";
 
-function Demo() {
+function ProductCardBox() {
   let products = productsArr; // Interface included in data/product.ts file
   const [isMore, setIsMore] = useState<number>(6); // This one is for button to show all products - 6 by default due to Figma project
 
@@ -165,4 +165,4 @@ function Demo() {
   );
 }
 
-export default Demo;
+export default ProductCardBox;
