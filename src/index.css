@@ -24,7 +24,7 @@ body {
 /* ************************** */
 .container {
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 144rem;
 }
 
 /* **************************** */
@@ -35,11 +35,11 @@ body {
 }
 
 .heading_secondary {
-  height: 56px;
-  padding: 4px 0 12px 0;
+  height: 5.6rem;
+  padding: 0.4rem 0 1.2rem 0;
 }
 .heading_secondary img {
-  height: 40px;
+  height: 4rem;
 }
 
 /* ******************************* */
@@ -51,20 +51,20 @@ option {
   outline: none;
   font-family: inherit;
   background-color: #fff;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 
 .polygon {
   clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 0% 00%);
   color: #00000000;
-  width: 8px;
-  height: 8px;
+  width: 0.8rem;
+  height: 0.8rem;
 }
 .polygon_up {
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
   color: #00000000;
-  width: 8px;
-  height: 8px;
+  width: 0.8rem;
+  height: 0.8rem;
 }
 .polygon_grey {
   background-color: #8d8d8d;
@@ -72,105 +72,105 @@ option {
 
 .polygon_blue {
   background-color: #007aff;
-  width: 7px;
-  height: 7px;
+  width: 0.7rem;
+  height: 0.7rem;
 }
 
 .input {
-  padding: 8px 12px;
+  padding: 0.8rem 1.2rem;
 }
 
 .input_search {
-  font-size: 14px;
-  line-height: 22px;
-  width: 249px;
-  height: 36px;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  width: 24.9rem;
+  height: 3.6rem;
 }
 
 .input_filter_boxes {
-  padding: 0 205px;
+  padding: 0 20.5rem;
   display: grid;
-  gap: 14px;
-  margin-bottom: 12px;
-  margin-top: 24px;
+  gap: 1.4rem;
+  margin-bottom: 1.2rem;
+  margin-top: 2.4rem;
 }
 
 .input_filters-box {
   display: flex;
   align-content: center;
   justify-content: center;
-  gap: 18px;
+  gap: 1.8rem;
 }
 
 .input_filters-box span {
   display: grid;
-  gap: 12px;
+  gap: 1.2rem;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.8rem;
   /* max-width: 249px; */
   width: 100%;
 }
 
 .input_filters-box span select {
-  padding: 8px 12px;
+  padding: 0.8rem 1.2rem;
 }
 
 .results {
-  padding: 0 208px;
-  margin-bottom: 12px;
-  font-size: 14px;
+  padding: 0 20.8rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
 }
 
 /* *********************** */
 
 .products_section {
   background-color: #f8f8f8;
-  padding-bottom: 48px;
-  padding-top: 24px;
+  padding-bottom: 4.8rem;
+  padding-top: 2.4rem;
 }
 
 .products_box {
   /* max-width: 1046px; */
-  padding: 0 197px;
+  padding: 0 19.7rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   background-color: #f8f8f8;
-  gap: 16px;
+  gap: 1.6rem;
 }
 
 .product_outbox {
-  max-width: 338px;
+  max-width: 33.8rem;
   height: 100%;
   display: grid;
-  gap: 10px;
+  gap: 1rem;
   background-color: #fff;
-  border-radius: 20px;
-  padding: 25px 24px;
+  border-radius: 2rem;
+  padding: 2.5rem 2.4rem;
 }
 
 .product_box {
   display: grid;
-  gap: 16px;
+  gap: 1.6rem;
 }
 
 .product_img {
   /* figma settings 200px */
-  max-width: 200px;
+  max-width: 20rem;
   /* max-width: 100%; */
   align-self: center;
   justify-self: center;
-  margin-top: 16px;
+  margin-top: 1.6rem;
 }
 
 .product_title {
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
   font-weight: 700;
 }
 
 .product_specs_box {
-  line-height: 18px;
+  line-height: 1.8rem;
 }
 .product_specs_box p span {
   font-weight: 700;
@@ -179,50 +179,50 @@ option {
 
 .product_price_box {
   display: flex;
-  gap: 2px;
+  gap: 0.2rem;
   font-weight: 700;
-  margin-bottom: 18px;
+  margin-bottom: 1.8rem;
 }
 
 .product_price_primary {
-  font-size: 40px;
+  font-size: 4rem;
 }
 .product_price_secondary {
-  line-height: 16px;
+  line-height: 1.6rem;
   text-align: right;
   align-self: center;
-  font-size: 14px;
-  padding-top: 6px;
+  font-size: 1.4rem;
+  padding-top: 0.6rem;
 }
 
 .font_grey {
   color: #767676;
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 
 .font_dark_grey {
   color: #555;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
 }
 
 .class_box {
   display: flex;
-  gap: 7px;
+  gap: 0.7rem;
   align-items: center;
 }
 
 .classClip {
-  font-size: 12px;
+  font-size: 1.2rem;
   clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
   background-color: #009949;
   color: #fff;
-  min-width: 49px;
-  min-height: 18px;
-  padding-left: 6px;
-  padding-top: 2px;
-  border-radius: 1px;
+  min-width: 4.9rem;
+  min-height: 1.8rem;
+  padding-left: 0.6rem;
+  padding-top: 0.2rem;
+  border-radius: 0.1rem;
 }
 
 button {
@@ -233,20 +233,20 @@ button {
   text-transform: uppercase;
   cursor: pointer;
   display: grid;
-  gap: 10px;
-  padding: 11px 40px; /* fixed height of button in figma*/
-  border-radius: 24px;
+  gap: 1rem;
+  padding: 1.1rem 4rem; /* fixed height of button in figma*/
+  border-radius: 2.4rem;
   /* width: min-content; */
   border: none;
   align-self: center;
   justify-self: center;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 1.4rem;
   letter-spacing: 0.15em;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 1rem;
   transition: opacity 0.3s;
-  width: 150px;
+  width: 15rem;
 }
 
 .btn:hover {
@@ -263,12 +263,12 @@ button {
 .show_more {
   cursor: pointer;
   margin: 0 auto;
-  margin-top: 24px;
+  margin-top: 2.4rem;
   display: flex;
-  gap: 9px;
+  gap: 0.9rem;
   color: #007aff;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 1.8rem;
+  line-height: 2rem;
   font-weight: 700;
   align-content: center;
   justify-content: center;
@@ -278,3 +278,46 @@ button {
 }
 
 /* ************************ */
+
+/* Quick RWD - can do better */
+@media (max-width: 76em) {
+  html {
+    font-size: 52.25%;
+  }
+  .products_box {
+    /* max-width: 1046px; */
+    padding: 0 19.7rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #f8f8f8;
+    gap: 1.6rem;
+  }
+}
+@media (max-width: 64em) {
+  .products_box {
+    grid-template-columns: 1fr 1fr;
+  }
+  .input_filters-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+  }
+}
+@media (max-width: 48em) {
+  .products_box {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .input_filters-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+  }
+}
