@@ -50,6 +50,7 @@ option {
   border: none;
   outline: none;
   font-family: inherit;
+  background-color: #fff;
 }
 
 .polygon {
@@ -274,3 +275,5 @@ button {
   border: none;
   background: none;
 }
+
+/* ************************ */

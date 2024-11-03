@@ -96,7 +96,12 @@ function Demo() {
             <span className="polygon polygon_blue">x</span>
           </button>
         ) : (
-          <button onClick={() => setIsMore(6)} className="show_more">
+          <button
+            onClick={() => {
+              setIsMore(6);
+            }}
+            className="show_more"
+          >
             <p>Pokaż mniej</p>
             <span className="polygon_up polygon_blue">x</span>
           </button>
