@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div className="heading_secondary grid_item__center">
-        <img src="../public/wybierz.png" />
+        <img src="wybierz.png" />
       </div>
       <div className="container">
         <Demo />
