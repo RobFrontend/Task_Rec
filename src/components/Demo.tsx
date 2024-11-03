@@ -4,14 +4,16 @@ import ProdDemo from "./ProdDemo.tsx";
 
 function Demo() {
   let products = productsArr; // Interface included in data file
-  const [isMore, setIsMore] = useState(6); // This one is for button to show all products - 6 by default due to Figma project
+  const [isMore, setIsMore] = useState<number>(6); // This one is for button to show all products - 6 by default due to Figma project
 
   // maping data for filters
-  const uniqueCapacity = [...new Set(products.map((prod) => prod.capacity))];
-  const uniqueEnergyClass = [
+  const uniqueCapacity: number[] = [
+    ...new Set(products.map((prod) => prod.capacity)),
+  ];
+  const uniqueEnergyClass: string[] = [
     ...new Set(products.map((prod) => prod.energyClass)),
   ];
-  const uniqueFunctions = [
+  const uniqueFunctions: string[] = [
     ...new Set(...products.map((prod) => [...new Set(prod.functions)])),
   ];
   //
