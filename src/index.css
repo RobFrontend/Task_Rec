@@ -131,7 +131,6 @@ option {
 }
 
 .products_box {
-  /* max-width: 1046px; */
   padding: 0 19.7rem;
   margin: 0 auto;
   display: grid;
@@ -235,7 +234,7 @@ button {
   cursor: pointer;
   display: grid;
   gap: 1rem;
-  padding: 1.1rem 4rem; /* fixed height of button in figma*/
+  padding: 1.1rem 4rem;
   border-radius: 2.4rem;
   /* width: min-content; */
   border: none;
@@ -247,7 +246,6 @@ button {
   text-align: center;
   margin-top: 1rem;
   transition: opacity 0.3s;
-  /* to avoid width change on click */
   width: 70%;
 }
 
@@ -285,7 +283,6 @@ button {
 
 /* ************************ */
 
-/* Quick RWD - can do better */
 @media (max-width: 76em) {
   html {
     font-size: 52.25%;

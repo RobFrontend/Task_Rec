@@ -3,10 +3,9 @@ import productsArr from "../../data/products.ts";
 import ProdDemo from "./ProductCard.tsx";
 
 function ProductCardBox() {
-  let products = productsArr; // Interface included in data/product.ts file
-  const [isMore, setIsMore] = useState<number>(6); // This one is for button to show all products - 6 by default due to Figma project
+  let products = productsArr;
+  const [isMore, setIsMore] = useState<number>(6);
 
-  // maping data for filters
   const uniqueCapacity: number[] = [
     ...new Set(productsArr.map((prod) => prod.capacity)),
   ];
@@ -16,44 +15,37 @@ function ProductCardBox() {
   const uniqueFunctions: string[] = [
     ...new Set(...productsArr.map((prod) => [...new Set(prod.functions)])),
   ];
-  //
 
-  // Search
   const [isSearch, setIsSearch] = useState("");
   products = products.filter((prod) =>
     prod.name.toLocaleLowerCase().includes(isSearch)
   );
 
-  // Filters *************************************
-  // Sortuj po
-  const [sortujPo, setSortujPo] = useState<string>("Wszystkie");
-  if (sortujPo === "Cena")
-    products = products.sort((a, b) => a.price - b.price);
-  if (sortujPo === "Popularność")
+  const [sortBy, setSortBy] = useState<string>("Wszystkie");
+  if (sortBy === "Cena") products = products.sort((a, b) => a.price - b.price);
+  if (sortBy === "Popularność")
     products = products.sort((a, b) => b.views - a.views);
-  // Funkcje:
-  const [sortujFunckje, setSortujFunkcje] = useState<string>("Pokaż wszystko");
-  if (sortujFunckje === "Wszystkie")
+
+  const [sortFunctions, setSortFunctions] = useState<string>("Pokaż wszystko");
+  if (sortFunctions === "Wszystkie")
     products = products.filter(
       (prod) => prod.functions.length === uniqueFunctions.length
     );
-  if (sortujFunckje !== "Wszystkie" && sortujFunckje !== "Pokaż wszystko")
+  if (sortFunctions !== "Wszystkie" && sortFunctions !== "Pokaż wszystko")
     products = products.filter((prod) =>
-      prod.functions.includes(sortujFunckje)
+      prod.functions.includes(sortFunctions)
     );
 
-  // Klasa energetyczna
-  const [sortujEnergia, setSortujEnergia] = useState<string>("Wszystkie");
+  const [sortEnergyClass, setSortEnergyClass] = useState<string>("Wszystkie");
 
-  if (sortujEnergia !== "Wszystkie")
+  if (sortEnergyClass !== "Wszystkie")
     products = products.filter((prod) =>
-      prod.energyClass.includes(sortujEnergia)
+      prod.energyClass.includes(sortEnergyClass)
     );
 
-  // Pojemnosc Sort
-  const [sortujPojemnosc, setSortujPojemnosc] = useState<number>(0);
-  if (sortujPojemnosc !== 0)
-    products = products.filter((prod) => prod.capacity === sortujPojemnosc);
+  const [sortCapacity, setSortCapcity] = useState<number>(0);
+  if (sortCapacity !== 0)
+    products = products.filter((prod) => prod.capacity === sortCapacity);
 
   return (
     <div className="products_section">
@@ -71,9 +63,9 @@ function ProductCardBox() {
           <span>
             Sortuj po:
             <select
-              value={sortujPo}
+              value={sortBy}
               onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
-                setSortujPo(e.target.value)
+                setSortBy(e.target.value)
               }
             >
               <option value="Wszystkie">Wszystkie</option>
@@ -84,9 +76,9 @@ function ProductCardBox() {
           <span>
             Funkcje:
             <select
-              value={sortujFunckje}
+              value={sortFunctions}
               onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
-                setSortujFunkcje(e.target.value)
+                setSortFunctions(e.target.value)
               }
             >
               <option value="Pokaż wszystko">Pokaż wszystko</option>
@@ -101,9 +93,9 @@ function ProductCardBox() {
           <span>
             Klasa energetyczna:
             <select
-              value={sortujEnergia}
+              value={sortEnergyClass}
               onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
-                setSortujEnergia(e.target.value)
+                setSortEnergyClass(e.target.value)
               }
             >
               <option value="Wszystkie">Wszystkie</option>
@@ -117,9 +109,9 @@ function ProductCardBox() {
           <span>
             Pojemność:
             <select
-              value={sortujPojemnosc}
+              value={sortCapacity}
               onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
-                setSortujPojemnosc(+e.target.value)
+                setSortCapcity(+e.target.value)
               }
             >
               <option value={0}>Wszystkie</option>

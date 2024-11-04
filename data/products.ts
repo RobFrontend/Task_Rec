@@ -24,7 +24,7 @@ const products: Product[] = [
       "Silnik inwerterowy",
       "Wyświetlacz elektroniczny",
     ],
-    views: 213721, // for popularity sort
+    views: 213721,
     energyClass: "A",
     priceValidDate: "15.09.2022 - 21.09.2022",
     price: 3199,
@@ -41,7 +41,7 @@ const products: Product[] = [
       "Panel AI Control",
       "Wyświetlacz elektroniczny",
     ],
-    views: 213769, // for popularity sort
+    views: 213769,
     energyClass: "B",
     priceValidDate: "15.09.2022 - 21.09.2022",
     price: 3299,
@@ -58,7 +58,7 @@ const products: Product[] = [
       "Silnik inwerterowy",
       "Wyświetlacz elektroniczny",
     ],
-    views: 213704, // for popularity sort
+    views: 213704,
     energyClass: "C",
     priceValidDate: "15.09.2022 - 21.09.2022",
     price: 2999,
@@ -71,7 +71,7 @@ const products: Product[] = [
     capacity: 9,
     dimensions: "55 x 60 x 85 cm",
     functions: ["Panel AI Control", "Silnik inwerterowy"],
-    views: 213701, // for popularity sort
+    views: 213701,
     energyClass: "D",
     priceValidDate: "15.09.2022 - 21.09.2022",
     price: 2899,
@@ -89,7 +89,7 @@ const products: Product[] = [
       "Silnik inwerterowy",
       "Wyświetlacz elektroniczny",
     ],
-    views: 213700, // for popularity sort
+    views: 213700,
     energyClass: "E",
     priceValidDate: "15.09.2022 - 21.09.2022",
     price: 3099,
@@ -106,7 +106,7 @@ const products: Product[] = [
       "Panel AI Control",
       "Wyświetlacz elektroniczny",
     ],
-    views: 696669, // for popularity sort
+    views: 696669,
     energyClass: "F",
     priceValidDate: "15.09.2022 - 21.09.2022",
     price: 2799,
@@ -124,7 +124,7 @@ const products: Product[] = [
       "Silnik inwerterowy",
       "Wyświetlacz elektroniczny",
     ],
-    views: 213769, // for popularity sort
+    views: 213769,
     energyClass: "A",
     priceValidDate: "15.09.2022 - 21.09.2022",
     price: 3199,
@@ -142,7 +142,7 @@ const products: Product[] = [
       "Silnik inwerterowy",
       "Wyświetlacz elektroniczny",
     ],
-    views: 213721, // for popularity sort
+    views: 213721,
     energyClass: "B",
     priceValidDate: "15.09.2022 - 21.09.2022",
     price: 3299,
@@ -155,7 +155,7 @@ const products: Product[] = [
     capacity: 8,
     dimensions: "55 x 60 x 85 cm",
     functions: ["Drzwi AddWash™", "Wyświetlacz elektroniczny"],
-    views: 213704, // for popularity sort
+    views: 213704,
     energyClass: "C",
     priceValidDate: "15.09.2022 - 21.09.2022",
     price: 2999,
@@ -173,7 +173,7 @@ const products: Product[] = [
       "Silnik inwerterowy",
       "Wyświetlacz elektroniczny",
     ],
-    views: 213701, // for popularity sort
+    views: 213701,
     energyClass: "D",
     priceValidDate: "15.09.2022 - 21.09.2022",
     price: 2899,
@@ -186,7 +186,7 @@ const products: Product[] = [
     capacity: 10.5,
     dimensions: "55 x 60 x 85 cm",
     functions: ["Drzwi AddWash™", "Panel AI Control"],
-    views: 213700, // for popularity sort
+    views: 213700,
     energyClass: "E",
     priceValidDate: "15.09.2022 - 21.09.2022",
     price: 3099,
@@ -199,7 +199,7 @@ const products: Product[] = [
     capacity: 8,
     dimensions: "55 x 60 x 85 cm",
     functions: ["Silnik inwerterowy", "Wyświetlacz elektroniczny"],
-    views: 696669, // for popularity sort
+    views: 696669,
     energyClass: "F",
     priceValidDate: "15.09.2022 - 21.09.2022",
     price: 2799,
