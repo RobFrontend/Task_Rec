@@ -1,6 +1,7 @@
 import { useState } from "react";
 import productsArr from "../../data/products.ts";
 import ProdDemo from "./ProductCard.tsx";
+import Filtering from "./Filtering.tsx";
 
 function ProductCardBox() {
   let products = productsArr;
@@ -21,30 +22,36 @@ function ProductCardBox() {
     prod.name.toLocaleLowerCase().includes(isSearch)
   );
 
-  const [sortBy, setSortBy] = useState<string>("Wszystkie");
+  const [sortBy, setSortBy] = useState<string>("Popularność");
   if (sortBy === "Cena") products = products.sort((a, b) => a.price - b.price);
   if (sortBy === "Popularność")
     products = products.sort((a, b) => b.views - a.views);
 
-  const [sortFunctions, setSortFunctions] = useState<string>("Pokaż wszystko");
-  if (sortFunctions === "Wszystkie")
+  const [sortFunctions, setSortFunctions] = useState<string>("Pokaż wszystkie");
+  if (sortFunctions === "Wszystkie funkcje")
     products = products.filter(
       (prod) => prod.functions.length === uniqueFunctions.length
     );
-  if (sortFunctions !== "Wszystkie" && sortFunctions !== "Pokaż wszystko")
+  if (
+    sortFunctions !== "Wszystkie funkcje" &&
+    sortFunctions !== "Pokaż wszystkie"
+  )
     products = products.filter((prod) =>
       prod.functions.includes(sortFunctions)
     );
 
-  const [sortEnergyClass, setSortEnergyClass] = useState<string>("Wszystkie");
+  const [sortEnergyClass, setSortEnergyClass] =
+    useState<string>("Pokaż wszystkie");
 
-  if (sortEnergyClass !== "Wszystkie")
+  if (sortEnergyClass !== "Pokaż wszystkie")
     products = products.filter((prod) =>
       prod.energyClass.includes(sortEnergyClass)
     );
 
-  const [sortCapacity, setSortCapcity] = useState<number>(0);
-  if (sortCapacity !== 0)
+  const [sortCapacity, setSortCapcity] = useState<number | string>(
+    "Pokaż wszystkie"
+  );
+  if (sortCapacity !== "Pokaż wszystkie")
     products = products.filter((prod) => prod.capacity === sortCapacity);
 
   return (
@@ -60,68 +67,63 @@ function ProductCardBox() {
       </div>
       <div className="input_filter_boxes">
         <div className="input_filters-box">
-          <span>
-            Sortuj po:
-            <select
-              value={sortBy}
-              onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
-                setSortBy(e.target.value)
-              }
+          <Filtering title="Sortuj po:" current={sortBy}>
+            <li value="Wszystkie" onClick={() => setSortBy("Wszystkie")}>
+              Wszystkie
+            </li>
+            <li value="Popularność" onClick={() => setSortBy("Popularność")}>
+              Popularność
+            </li>
+            <li value="Cena" onClick={() => setSortBy("Cena")}>
+              Cena
+            </li>
+          </Filtering>
+          <Filtering title="Funkcje:" current={sortFunctions}>
+            <li
+              value="Pokaż wszystkie"
+              onClick={() => setSortFunctions("Pokaż wszystkie")}
             >
-              <option value="Wszystkie">Wszystkie</option>
-              <option>Cena</option>
-              <option value="Popularność">Popularność</option>
-            </select>
-          </span>
-          <span>
-            Funkcje:
-            <select
-              value={sortFunctions}
-              onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
-                setSortFunctions(e.target.value)
-              }
+              Pokaż wszystkie
+            </li>
+            <li
+              value="Wszystkie funkcje"
+              onClick={() => setSortFunctions("Wszystkie funkcje")}
             >
-              <option value="Pokaż wszystko">Pokaż wszystko</option>
-              <option value="Wszystkie">Wszystkie funkcje</option>
-              {uniqueFunctions.map((uf) => (
-                <option value={uf} key={uf}>
-                  {uf}
-                </option>
-              ))}
-            </select>
-          </span>
-          <span>
-            Klasa energetyczna:
-            <select
-              value={sortEnergyClass}
-              onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
-                setSortEnergyClass(e.target.value)
-              }
+              Wszystkie funkcje
+            </li>
+            {uniqueFunctions.map((uf) => (
+              <li value={uf} key={uf} onClick={() => setSortFunctions(uf)}>
+                {uf}
+              </li>
+            ))}
+          </Filtering>
+          <Filtering title="Klasa energetyczna" current={sortEnergyClass}>
+            <li
+              value="Pokaż wszystkie"
+              onClick={() => setSortEnergyClass("Pokaż wszystkie")}
             >
-              <option value="Wszystkie">Wszystkie</option>
-              {uniqueEnergyClass.map((ue) => (
-                <option value={ue} key={ue}>
-                  {ue}
-                </option>
-              ))}
-            </select>
-          </span>
-          <span>
-            Pojemność:
-            <select
-              value={sortCapacity}
-              onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
-                setSortCapcity(+e.target.value)
-              }
+              Pokaż wszystkie
+            </li>
+
+            {uniqueEnergyClass.map((ue) => (
+              <li value={ue} key={ue} onClick={() => setSortEnergyClass(ue)}>
+                {ue}
+              </li>
+            ))}
+          </Filtering>
+          <Filtering title="Pojemność" current={sortCapacity}>
+            <li
+              value="Pokaż wszystkie"
+              onClick={() => setSortCapcity("Pokaż wszystkie")}
             >
-              <option value={0}>Wszystkie</option>
-              {uniqueCapacity.map((uc) => (
-                <option value={uc} key={uc}>
-                  {uc} kg
-                </option>
-              ))}
-            </select>
-          </span>
+              Pokaż szystkie
+            </li>
+            {uniqueCapacity.map((uc) => (
+              <li value={uc} key={uc} onClick={() => setSortCapcity(uc)}>
+                {uc} kg
+              </li>
+            ))}
+          </Filtering>
         </div>
       </div>
       <p className="results">Liczba wyników: {products.length}</p>
