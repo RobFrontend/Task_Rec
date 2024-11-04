@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 interface Product {
   prod: {
     id: number;
@@ -15,6 +17,7 @@ interface Product {
 }
 
 const ProductCard: React.FC<Product> = ({ prod }) => {
+  const [isChoosen, setIsChoosen] = useState<boolean>(false);
   return (
     <div className="product_outbox">
       <div className="product_box">
@@ -53,7 +56,21 @@ const ProductCard: React.FC<Product> = ({ prod }) => {
           </p>
         </div>
       </div>
-      <button className="btn btn_blue">Wybierz</button>
+      {isChoosen ? (
+        <button
+          className="btn btn_black"
+          onClick={() => setIsChoosen(!isChoosen)}
+        >
+          Wybrane
+        </button>
+      ) : (
+        <button
+          className="btn btn_blue"
+          onClick={() => setIsChoosen(!isChoosen)}
+        >
+          Wybierz
+        </button>
+      )}
     </div>
   );
 };

@@ -247,7 +247,8 @@ button {
   text-align: center;
   margin-top: 1rem;
   transition: opacity 0.3s;
-  width: 15rem;
+  /* to avoid width change on click */
+  width: 70%;
 }
 
 .btn:hover {
@@ -257,6 +258,10 @@ button {
 .btn_blue {
   color: #fff;
   background-color: #1428a0;
+}
+.btn_black {
+  color: #fff;
+  background-color: #000;
 }
 
 /* ********************************************** */
