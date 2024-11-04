@@ -42,6 +42,7 @@ const ProductCard: React.FC<Product> = ({ prod }) => {
         <div>
           <p className="font_grey">Cena obowiązuje: {prod.priceValidDate}</p>
           <div className="product_price_box">
+            {/* Setting the price format to add a space every 3 characters */}
             <p className="product_price_primary">
               {prod.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")}
             </p>
