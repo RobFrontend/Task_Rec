@@ -5,6 +5,7 @@ import Filtering from "./Filtering.tsx";
 
 function ProductCardBox() {
   let products = productsArr;
+
   const [isMore, setIsMore] = useState<number>(6);
 
   const uniqueCapacity: number[] = [
