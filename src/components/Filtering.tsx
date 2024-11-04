@@ -29,9 +29,9 @@ function Filtering({ title, current, children }: ListProps) {
       >
         <p className="show_paragraph">{current}</p>
         {!isOpen ? (
-          <span className="polygon polygon_grey"></span>
+          <p className="polygon polygon_grey"></p>
         ) : (
-          <span className="polygon_up polygon_grey"></span>
+          <p className="polygon_up polygon_grey"></p>
         )}
         {isOpen && (
           <ul className="showed_filters" onClick={() => setIsOpen(!isOpen)}>
