@@ -14,8 +14,7 @@ function Filtering({ title, current, children }: ListProps) {
       setIsOpen(false);
     }
     if (isOpen) document.body.addEventListener("click", filteringClose);
-
-    return () => document.body.addEventListener("click", filteringClose);
+    return () => document.body.removeEventListener("click", filteringClose);
   }, [isOpen]);
 
   return (
